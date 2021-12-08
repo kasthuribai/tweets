@@ -11,3 +11,12 @@ scipy==1.7.3
 sklearn==0.0
 threadpoolctl==3.0.0
 Werkzeug==2.0.2
+pandas
+scikit-learn
+nltk
+matplotlib
+wordcloud
+joblib
+wordninja
+xgboost
+streamlit

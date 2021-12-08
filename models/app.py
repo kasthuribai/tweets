@@ -15,9 +15,8 @@ clf = pickle.load(open('clf.pkl','rb'))
 loaded_vec =pickle.load(open("count_vect.pkl","rb"))
 
 
-@app.route('/')
 def symptom():
-    return render_template('./template/index.html')
+    return render_template('../template/index.html')
 
 
 @app.route('/result',methods =['POST','GET'])
@@ -28,9 +27,5 @@ def result():
         return render_template("predict.html",result = result_pred)
     
 
-if __name__ == '__main__':     
-     port = int(os.environ.get('PORT', 5000))
-     #app.debug = True
-     #app.run(host='192.168.5.1', port=port)
-     app.run(port=port,debug=True)
-     #app.run
+if __name__ == "__main__":
+    main()

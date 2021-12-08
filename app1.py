@@ -9,6 +9,7 @@ from flask import Flask, jsonify, request
 import numpy as np
 import pandas as pd
 from sklearn import linear_model
+import pickle
 #from sklearn.externals import joblib
 import joblib
 import re

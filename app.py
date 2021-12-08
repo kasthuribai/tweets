@@ -18,17 +18,6 @@ nltk.download('wordnet')
 nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
 import flask
-    
-###################################################
-def pre_processing(text):
-    lemmatizer = WordNetLemmatizer()
-    text = text.lower()
-    text = re.sub('[0-9]+','num',text)
-    word_list = nltk.word_tokenize(text)
-    word_list =  [lemmatizer.lemmatize(item) for item in word_list]
-    return ' '.join(word_list)
-###################################################
-
 
 app = Flask(__name__)
 clf = pickle.load(open('clf.pkl','rb'))
@@ -48,4 +37,4 @@ def result():
     
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)
